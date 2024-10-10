@@ -9,22 +9,45 @@ public class Exercise04 {
         System.out.println("Obtén el factorial del número 7 → (7!): " + (7 * 6 * 5 * 4 * 3 * 2 * 1));
         System.out.println("######################################################################");
         System.out.println("Ejemplos de cálculos CON estructuras de control:");
+        //System.out.println(sumNum(5));
+        // System.out.println(sumEvenNum(20));
+        System.out.println(factorial(7));
 
     }
 
     public static int sumNum(int num) {
-        return 0;
-    }
+        int sum = 0;
+        for (int i = 1; i < num + 1; i++) {
+            sum += i;
+        }
+        return sum;
+    } // DONE
 
     public static int sumEvenNum(int num) {
-        return 0;
-    }
+        int evenSum = 0;
+        int evenCounter = 1;
+        for (int i = 1; evenCounter < num + 1; i++) {
+            if (i % 2 == 0) {
+                evenSum += i;
+                evenCounter++;
+            }
+        }
+        return evenSum;
+    } // DONE
 
     public static int factorial(int num) {
-        return 0;
+        int product = num;
+        for (int i = num - 1; i > 0 ; i--) {
+            product *= i;
+        }
+        return product;
     }
 
     public static int recursiveFactorial(int num) {
-        return 0;
+        if (num <= 1) {
+            return 1;
+        } else {
+            return num * recursiveFactorial(num - 1);
+        }
     }
 }
